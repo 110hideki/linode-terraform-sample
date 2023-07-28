@@ -4,7 +4,7 @@ resource "linode_instance_disk" "boot" {
 	linode_id = linode_instance.my-instance.id
 	size = linode_instance.my-instance.specs.0.disk - var.dmzhost.swapsize
 	image = var.dmzhost.image
-#	root_pass = "terr4form-test"
+#	root_pass = "{your password}"
 	root_pass = random_string.password.result
 }
 
